@@ -2,7 +2,7 @@ import type { CSSProperties } from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, Code } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Code, GraduationCap } from 'lucide-react';
 import { CREATOR } from '@/lib/creator';
 import BlurText from '@/components/reactbits/BlurText';
 import ClickSpark from '@/components/reactbits/ClickSpark';
@@ -11,7 +11,7 @@ import SpotlightCard from '@/components/reactbits/SpotlightCard';
 
 export const metadata: Metadata = {
   title: `Pembuat | SYVA Spatial Lab`,
-  description: `${CREATOR.name}, pembuat SYVA Spatial Lab: lab belajar 3D interaktif.`,
+  description: `${CREATOR.name}, guru di SMK IT As-Syifa Boarding School dan pembuat SYVA Spatial Lab, lab belajar 3D interaktif.`,
 };
 
 const REPO_URL = 'https://github.com/wafiir051-ai/syva';
@@ -88,7 +88,11 @@ export default function PembuatPage() {
                   className="text-balance font-display text-4xl font-bold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl"
                 />
               </div>
-              <p className="mt-5 max-w-lg text-lg leading-relaxed">
+              <p className="mt-5 inline-flex items-center gap-2 rounded-full border border-line bg-ink-deep px-4 py-2 text-sm font-semibold text-white">
+                <GraduationCap aria-hidden className="h-4 w-4 shrink-0 text-glow" />
+                Guru di SMK IT As-Syifa Boarding School
+              </p>
+              <p className="mt-4 max-w-lg text-lg leading-relaxed">
                 Pembuat SYVA Spatial Lab, lab belajar 3D interaktif.
               </p>
 
