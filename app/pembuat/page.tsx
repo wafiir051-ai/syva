@@ -11,7 +11,7 @@ import SpotlightCard from '@/components/reactbits/SpotlightCard';
 
 export const metadata: Metadata = {
   title: `Pembuat | SYVA Spatial Lab`,
-  description: `${CREATOR.name}, pembuat SYVA Spatial Lab: lab belajar 3D interaktif untuk SMK IT As-Syifa.`,
+  description: `${CREATOR.name}, pembuat SYVA Spatial Lab: lab belajar 3D interaktif.`,
 };
 
 const REPO_URL = 'https://github.com/wafiir051-ai/syva';
@@ -89,7 +89,7 @@ export default function PembuatPage() {
                 />
               </div>
               <p className="mt-5 max-w-lg text-lg leading-relaxed">
-                Pembuat SYVA Spatial Lab, lab belajar 3D interaktif untuk SMK IT As-Syifa.
+                Pembuat SYVA Spatial Lab, lab belajar 3D interaktif.
               </p>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -148,7 +148,7 @@ export default function PembuatPage() {
         <footer className="border-t border-line/60">
           <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-6">
             <p>
-              <span className="font-display font-bold text-white">SYVA</span> Spatial Lab · SMK IT As-Syifa
+              <span className="font-display font-bold text-white">SYVA</span> Spatial Lab
             </p>
             <Link href="/" className={`rounded font-mono text-xs text-periwinkle hover:text-white ${focusRing}`}>
               Kembali ke beranda
