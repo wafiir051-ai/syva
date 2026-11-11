@@ -344,7 +344,7 @@ export default function LandingPage() {
         <footer className="border-t border-line/60">
           <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-8 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-6">
             <p>
-              <span className="font-display font-bold text-white">SYVA</span> Spatial Lab · SMK IT As-Syifa
+              <span className="font-display font-bold text-white">SYVA</span> Spatial Lab
             </p>
             <p className="font-mono text-xs text-periwinkle">Gerakan tangan · Suara · 3D</p>
           </div>

@@ -1,6 +1,6 @@
 # SYVA Spatial Lab
 
-Lab belajar 3D interaktif untuk SMK IT As-Syifa. Siswa menjelajahi model materi dengan **gerakan tangan** dan **asisten suara**, langsung di browser tanpa headset VR.
+Lab belajar 3D interaktif. Siswa menjelajahi model materi dengan **gerakan tangan** dan **asisten suara**, langsung di browser tanpa headset VR.
 
 **Demo:** https://syva-seven.vercel.app
 

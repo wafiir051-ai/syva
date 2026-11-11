@@ -182,7 +182,7 @@ export default function Hero() {
             className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-ink-deep px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-lilac"
           >
             <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-glow" />
-            <ShinyText text="SMK IT As-Syifa" color="#c4c0ff" shineColor="#ffffff" speed={3} />
+            <ShinyText text="Lab belajar 3D" color="#c4c0ff" shineColor="#ffffff" speed={3} />
           </motion.p>
           <HeroTitle />
           <motion.p

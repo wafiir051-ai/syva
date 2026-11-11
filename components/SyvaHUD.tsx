@@ -23,7 +23,7 @@ export default function SyvaHUD({
         <div className="min-w-0">
           <p className="flex items-center gap-2 font-mono text-[11px] font-semibold uppercase tracking-widest text-glow">
             <span aria-hidden className="h-1.5 w-1.5 shrink-0 animate-pulse rounded-full bg-glow" />
-            <span className="truncate">Lab Siswa · SMK IT As-Syifa</span>
+            <span className="truncate">Lab Siswa</span>
           </p>
           <h1 className="mt-1 truncate font-display text-lg font-bold leading-tight text-white sm:text-xl">{title}</h1>
           <p className="mt-0.5 hidden max-w-xl truncate text-sm text-mist sm:block">{description}</p>

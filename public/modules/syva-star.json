@@ -1,7 +1,7 @@
 {
   "id": "syva-star-01",
   "title": "Topologi Star Jaringan Dasar",
-  "description": "Simulasi alur distribusi paket data dari Workstation ke Central Switch dan Data Server SMK IT As-Syifa.",
+  "description": "Simulasi alur distribusi paket data dari Workstation ke Central Switch dan Data Server.",
   "nodes": [
     { "id": "node-switch", "type": "SWITCH", "label": "Central Switch", "ipAddress": "192.168.1.1", "position": [0, 0, 0] },
     { "id": "node-router", "type": "ROUTER", "label": "Main Gateway", "ipAddress": "192.168.1.254", "position": [0, 2.2, -1] },
