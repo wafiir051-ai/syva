@@ -1,0 +1,18 @@
+{
+  "id": "syva-star-01",
+  "title": "Topologi Star Jaringan Dasar",
+  "description": "Simulasi alur distribusi paket data dari Workstation ke Central Switch dan Data Server SMK IT As-Syifa.",
+  "nodes": [
+    { "id": "node-switch", "type": "SWITCH", "label": "Central Switch", "ipAddress": "192.168.1.1", "position": [0, 0, 0] },
+    { "id": "node-router", "type": "ROUTER", "label": "Main Gateway", "ipAddress": "192.168.1.254", "position": [0, 2.2, -1] },
+    { "id": "node-server", "type": "SERVER", "label": "Syva Data Center", "ipAddress": "10.0.0.1", "position": [3.5, 1, -1] },
+    { "id": "node-client1", "type": "CLIENT", "label": "Workstation 01", "ipAddress": "192.168.1.10", "position": [-3.5, -1.8, 1] },
+    { "id": "node-client2", "type": "CLIENT", "label": "Workstation 02", "ipAddress": "192.168.1.11", "position": [0, -2.2, 1] }
+  ],
+  "connections": [
+    { "from": "node-switch", "to": "node-router", "bandwidth": "1 Gbps", "status": "ACTIVE" },
+    { "from": "node-router", "to": "node-server", "bandwidth": "10 Gbps", "status": "ACTIVE" },
+    { "from": "node-client1", "to": "node-switch", "bandwidth": "100 Mbps", "status": "ACTIVE" },
+    { "from": "node-client2", "to": "node-switch", "bandwidth": "100 Mbps", "status": "ACTIVE" }
+  ]
+}

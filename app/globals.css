@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-baloo), var(--font-geist-sans), sans-serif;
+  --color-slate-950: #020617;
+
+  /* SYVA palette: indigo stage, orange action, cyan glow. Solid surfaces only
+     (no glass/blur). Small text on flame must use ink-deep (5.6:1); white on
+     flame fails contrast. Small accent text on surfaces uses glow, not flame. */
+  --color-ink: #2a2788; /* page background */
+  --color-ink-deep: #1f1c6b; /* nav, inputs, alternate sections, text on flame */
+  --color-surface: #3836a8; /* cards and panels */
+  --color-surface-hi: #4347c6; /* raised / hover / hero disc */
+  --color-line: #5559d9; /* borders and dividers */
+  --color-periwinkle: #9da3f7; /* decorative strokes, tertiary text */
+  --color-mist: #cbceff; /* secondary text */
+  --color-flame: #ff7a1f; /* primary action */
+  --color-flame-hi: #ff9445; /* primary action hover */
+  --color-glow: #3fefff; /* tech highlights, focus ring, small accent text */
+  --color-lilac: #c4c0ff; /* hero eyebrow + sparkles (lightened from #a9a4ff for 4.5:1 on hero blue) */
+  --color-iris: #5b5bf0; /* secondary round button */
+  --color-paper: #f4f4ff; /* light theme background */
+  --color-paper-line: #dcddfb; /* light theme borders */
+}
+
+:root {
+  --background: #2a2788;
+  --foreground: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrolling and text selection are locked per-page (the student lab does this
+   on its own <main>), not globally, so regular pages can scroll. */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-mono), monospace;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #5559d9;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff7a1f;
+}

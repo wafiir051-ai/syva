@@ -1,0 +1,275 @@
+import type { SubjectCategory, SyvaModule } from '@/types/syva';
+
+/** Subjects a teacher can pick, in display order (UMUM is the internal fallback). */
+export const SUBJECT_ORDER: SubjectCategory[] = ['TKJ_IT', 'BIOLOGI', 'FISIKA', 'MATEMATIKA', 'SEJARAH'];
+
+export const SUBJECT_LABELS: Record<SubjectCategory, string> = {
+  TKJ_IT: 'TKJ & IT',
+  BIOLOGI: 'Biologi',
+  FISIKA: 'Fisika',
+  MATEMATIKA: 'Matematika',
+  SEJARAH: 'Sejarah',
+  UMUM: 'Umum',
+};
+
+export const SUBJECT_PRESETS: Record<SubjectCategory, SyvaModule> = {
+  TKJ_IT: {
+    id: 'preset-tkj',
+    title: 'PC Gaming & Arsitektur Hardware',
+    category: 'TKJ_IT',
+    description: 'Simulasi 3D lengkap casing PC, Liquid Cooler, GPU, RAM RGB, dan Motherboard.',
+    nodes: [
+      {
+        id: 'node-pc',
+        label: 'Rig PC Gaming Full Specs',
+        subtitle: 'Intel Core i9 / RTX 4090 / 32GB RAM',
+        description: 'Unit komputer PC Gaming modern dengan casing tempered glass, pendingin cair, dan pencahayaan RGB.',
+        assetType: 'PC_GAMING',
+        color: '#3fefff',
+        position: [0, 0, 0],
+        annotations: [
+          {
+            id: 'ann-cpu',
+            label: 'CPU Liquid Cooler',
+            subtitle: 'Intel Core i9 14900K',
+            description: 'Pusat pemrosesan utama komputer yang didinginkan oleh sistem pendingin cair.',
+            position: [-0.35, 0.5, 0.1],
+          },
+          {
+            id: 'ann-ram',
+            label: 'RAM DDR5 RGB',
+            subtitle: '32GB (2x16GB) 6000MHz',
+            description: 'Memori penyimpanan sementara berkecepatan tinggi dengan modul RGB.',
+            position: [0.15, 0.45, 0.15],
+          },
+          {
+            id: 'ann-gpu',
+            label: 'VGA / GPU Card',
+            subtitle: 'NVIDIA GeForce RTX 4090',
+            description: 'Kartu grafis utama penanganan kalkulasi visual 3D dan rendering.',
+            position: [-0.05, 0.05, 0.25],
+          },
+          {
+            id: 'ann-mobo',
+            label: 'Motherboard ATX',
+            subtitle: 'Chipset Z790 Gaming',
+            description: 'Papan sirkuit utama yang menghubungkan seluruh komponen komputer.',
+            position: [-0.5, 0.2, -0.2],
+          },
+          {
+            id: 'ann-psu',
+            label: 'Power Supply (PSU)',
+            subtitle: '850W Gold Modular',
+            description: 'Penyuplai daya listrik searah (DC) ke seluruh komponen PC.',
+            position: [0.0, -0.65, 0.2],
+          },
+          {
+            id: 'ann-fan',
+            label: 'Kipas Intake RGB',
+            subtitle: '3x 120mm High Static',
+            description: 'Kipas pendingin casing untuk sirkulasi aliran udara dingin.',
+            position: [0.75, 0.15, 0.3],
+          },
+        ],
+      },
+    ],
+  },
+  BIOLOGI: {
+    id: 'preset-bio',
+    title: 'Anatomi Jantung Manusia',
+    category: 'BIOLOGI',
+    description: 'Visualisasi 3D anatomi organ jantung beserta pembuluh darah Aorta.',
+    nodes: [
+      {
+        id: 'node-heart',
+        label: 'Organ Jantung Manusia',
+        subtitle: 'Cor // Human Heart Anatomy',
+        description: 'Organ pemompa darah utama yang terdiri atas atrium, ventrikel, dan pembuluh darah aorta.',
+        assetType: 'ORGAN_HEART',
+        color: '#ff6b8b',
+        position: [0, 0, 0],
+        annotations: [
+          {
+            id: 'ann-aorta',
+            label: 'Pembuluh Darah Aorta',
+            subtitle: 'Arteri Utama',
+            description: 'Pembuluh darah besar yang mengalirkan darah kaya oksigen ke seluruh tubuh.',
+            position: [0.0, 0.75, 0.1],
+          },
+          {
+            id: 'ann-atrium',
+            label: 'Atrium Kanan & Kiri',
+            subtitle: 'Serambi Jantung',
+            description: 'Ruang jantung bagian atas yang menerima aliran darah masuk.',
+            position: [-0.35, 0.2, 0.25],
+          },
+          {
+            id: 'ann-ventrikel',
+            label: 'Ventrikel (Bilik Jantung)',
+            subtitle: 'Pompa Otot Utama',
+            description: 'Bilik berotot tebal yang memompa darah ke paru-paru dan seluruh tubuh.',
+            position: [0.2, -0.35, 0.25],
+          },
+          {
+            id: 'ann-vena',
+            label: 'Vena Cava',
+            subtitle: 'Pembuluh Balik Utama',
+            description: 'Pembuluh darah yang membawa kembali darah kotor kaya karbondioksida dari tubuh.',
+            position: [-0.45, 0.5, -0.1],
+          },
+        ],
+      },
+    ],
+  },
+  FISIKA: {
+    id: 'preset-fis',
+    title: 'Medan Gravitasi & Orbit Bumi',
+    category: 'FISIKA',
+    description: 'Simulasi gaya tarik gravitasi bumi dan lintasan orbit satelit.',
+    nodes: [
+      {
+        id: 'node-earth',
+        label: 'Simulasi Gravitasi Bumi',
+        subtitle: 'g = 9.8 m/s² // Earth Orbit',
+        description: 'Visualisasi medan gravitasi bumi dengan cincin orbit lintasan satelit.',
+        assetType: 'EARTH_GRAVITY',
+        color: '#ffc94d',
+        position: [0, 0, 0],
+        annotations: [
+          {
+            id: 'ann-atmosfer',
+            label: 'Lapisan Atmosfer',
+            subtitle: 'Pelindung Radiasi',
+            description: 'Lapisan gas yang menyelimuti bumi dan menahan panas radiasi matahari.',
+            position: [0.0, 0.85, 0.0],
+          },
+          {
+            id: 'ann-core',
+            label: 'Pusat Gravitasi Bumi',
+            subtitle: 'g = 9.8 m/s²',
+            description: 'Titik pusat percepatan gravitasi bumi yang menarik seluruh massa objek ke pusat.',
+            position: [0.0, 0.0, 0.0],
+          },
+          {
+            id: 'ann-orbit',
+            label: 'Cincin Orbit Satelit',
+            subtitle: 'Gaya Sentripetal',
+            description: 'Lintasan seimbang antara gaya gravitasi dan kecepatan orbit satelit.',
+            position: [0.85, 0.55, 0.5],
+          },
+          {
+            id: 'ann-khatulistiwa',
+            label: 'Garis Khatulistiwa',
+            subtitle: 'Ekuator 0°',
+            description: 'Garis imajiner yang membagi bumi menjadi belahan utara dan selatan.',
+            position: [0.85, 0.0, 0.1],
+          },
+        ],
+      },
+    ],
+  },
+  MATEMATIKA: {
+    id: 'preset-mat',
+    title: 'Matriks & Geometri Ruang Rubik 3x3',
+    category: 'MATEMATIKA',
+    description: 'Visualisasi Spasial Rubik 3x3x3 untuk pembelajaran Dimensi Tiga (R³) & Koordinat.',
+    nodes: [
+      {
+        id: 'node-rubik',
+        label: 'Rubik Cube Spasial 3x3x3',
+        subtitle: 'Ruang Dimensi Tiga (R³) // Vektor X, Y, Z',
+        description: 'Model matematika kubus rubik 3x3x3 sebagai representasi titik koordinat spasial dan matriks.',
+        assetType: 'GEOMETRY_MATH',
+        color: '#5ee6a8',
+        position: [0, 0, 0],
+        annotations: [
+          {
+            id: 'ann-x',
+            label: 'Sumbu X (Horizontal)',
+            subtitle: 'Vektor Merah (x, 0, 0)',
+            description: 'Sumbu koordinat arah samping kanan dan kiri dalam ruang 3D.',
+            position: [0.7, 0.0, 0.0],
+          },
+          {
+            id: 'ann-y',
+            label: 'Sumbu Y (Vertikal)',
+            subtitle: 'Vektor Hijau (0, y, 0)',
+            description: 'Sumbu koordinat arah atas dan bawah dalam ruang 3D.',
+            position: [0.0, 0.7, 0.0],
+          },
+          {
+            id: 'ann-z',
+            label: 'Sumbu Z (Kedalaman)',
+            subtitle: 'Vektor Biru (0, 0, z)',
+            description: 'Sumbu koordinat arah depan dan belakang (perspektif kedalaman).',
+            position: [0.0, 0.0, 0.7],
+          },
+          {
+            id: 'ann-cube',
+            label: 'Sub-Kubus Matriks Elementer',
+            subtitle: 'Grid 3x3x3 (27 Unit)',
+            description: 'Tiap kubus kecil merepresentasikan satu entri sel matriks 3 dimensi.',
+            position: [-0.55, 0.55, 0.55],
+          },
+        ],
+      },
+    ],
+  },
+  SEJARAH: {
+    id: 'preset-sej',
+    title: 'Colosseum & Arsitektur Romawi Kuno',
+    category: 'SEJARAH',
+    description: 'Visualisasi 3D amfiteater Colosseum peninggalan Kekaisaran Romawi Kuno.',
+    nodes: [
+      {
+        id: 'node-colosseum',
+        label: 'Colosseum Roma',
+        subtitle: '70-80 Masehi // Kekaisaran Romawi',
+        description: 'Amfiteater megah tempat pertunjukan gladiator dan monumen bersejarah Romawi Kuno.',
+        assetType: 'COLOSSEUM',
+        color: '#ff9445',
+        position: [0, 0, 0],
+        annotations: [
+          {
+            id: 'ann-arena',
+            label: 'Arena Utama (Hypogeum)',
+            subtitle: 'Pentas Pertunjukan',
+            description: 'Area panggung utama bawah tanah tempat bertarungnya para gladiator.',
+            position: [0.0, -0.1, 0.2],
+          },
+          {
+            id: 'ann-dinding',
+            label: 'Dinding Lengkung (Arcade)',
+            subtitle: 'Arsitektur Beton Romawi',
+            description: 'Lengkungan bertingkat khas arsitektur Kekaisaran Romawi Kuno.',
+            position: [0.75, 0.4, 0.1],
+          },
+          {
+            id: 'ann-tribun',
+            label: 'Tribun Penonton (Cavea)',
+            subtitle: 'Kapasitas 50.000 Tempat Duduk',
+            description: 'Tingkatan tempat duduk penonton yang disusun berdasarkan kelas sosial.',
+            position: [-0.5, 0.3, 0.3],
+          },
+        ],
+      },
+    ],
+  },
+  UMUM: {
+    id: 'preset-umum',
+    title: 'Modul Pembelajaran Umum',
+    category: 'UMUM',
+    description: 'Modul interaktif umum.',
+    nodes: [
+      {
+        id: 'node-umum',
+        label: 'Model 3D Umum',
+        subtitle: 'General Interactive Model',
+        description: 'Penjelasan umum materi pembelajaran.',
+        assetType: 'PC_GAMING',
+        color: '#3fefff',
+        position: [0, 0, 0],
+      },
+    ],
+  },
+};
