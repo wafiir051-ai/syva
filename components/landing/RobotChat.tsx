@@ -153,12 +153,7 @@ export default function RobotChat() {
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-flame text-ink-deep">
             <Sparkles aria-hidden className="h-4 w-4" />
           </span>
-          <div>
-            <p className="font-display text-lg font-bold leading-none text-white">SYVA</p>
-            <p className="mt-1 font-mono text-[10px] uppercase tracking-widest text-glow">
-              {serverReady ? 'Ditenagai Groq · tanpa login' : 'AI di perangkatmu · tanpa login'}
-            </p>
-          </div>
+          <p className="font-display text-xl font-bold leading-none text-white">SYVA</p>
         </div>
         <button
           type="button"
@@ -235,9 +230,7 @@ export default function RobotChat() {
               <Send aria-hidden className="h-4 w-4" />
             </button>
           </form>
-          {serverReady && (
-            <p className="px-4 pb-3 font-mono text-[10px] text-periwinkle">Pertanyaanmu dikirim ke Groq untuk dijawab.</p>
-          )}
+          {serverReady && <p className="px-4 pb-3 text-xs text-periwinkle">Jangan tulis data pribadi di sini.</p>}
         </>
       ) : (
         <div className="space-y-4 overflow-y-auto px-4 py-5 text-sm leading-relaxed">

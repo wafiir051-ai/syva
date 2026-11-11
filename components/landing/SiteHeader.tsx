@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
 
-const CREATOR = 'Moch Fahmi Pahrezi';
+import { CREATOR } from '@/lib/creator';
 
 const focusRing = 'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-glow';
 const thinLink = `cursor-pointer rounded py-3 text-sm font-medium text-white/90 underline decoration-transparent decoration-2 underline-offset-[10px] transition-colors duration-200 hover:text-white hover:decoration-flame ${focusRing}`;
@@ -58,19 +58,20 @@ export default function SiteHeader() {
           >
             Masuk Lab
           </Link>
-          <div className="flex items-center gap-3" title={`Dibuat oleh ${CREATOR}`}>
+          <Link
+            href="/pembuat"
+            aria-label={`Tentang pembuat: ${CREATOR.name}`}
+            className={`inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-full border-2 border-line pl-0.5 pr-0.5 text-sm font-semibold text-white transition-colors duration-200 hover:border-periwinkle sm:pr-4 ${focusRing}`}
+          >
             <Image
-              src="/pembuat.jpg"
-              alt={`Foto ${CREATOR}, pembuat SYVA`}
-              width={44}
-              height={44}
-              className="h-11 w-11 shrink-0 rounded-full border-2 border-white/30 object-cover object-[50%_25%] shadow-[0_8px_20px_-10px_rgba(10,8,60,0.9)]"
+              src={CREATOR.avatar}
+              alt=""
+              width={36}
+              height={36}
+              className="h-9 w-9 shrink-0 rounded-full object-cover object-[50%_25%]"
             />
-            <p className="hidden leading-tight xl:block">
-              <span className="block font-mono text-[10px] uppercase tracking-widest text-lilac">Dibuat oleh</span>
-              <span className="block text-sm font-semibold text-white">{CREATOR}</span>
-            </p>
-          </div>
+            <span className="hidden sm:inline">Pembuat</span>
+          </Link>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -108,9 +109,14 @@ export default function SiteHeader() {
               </Link>
             </li>
           </ul>
-          <p className="mt-1 border-t border-line/60 px-4 py-3 text-sm text-mist">
-            Dibuat oleh <span className="font-semibold text-white">{CREATOR}</span>
-          </p>
+          <Link
+            href="/pembuat"
+            onClick={() => setOpen(false)}
+            className={`mt-1 flex min-h-12 cursor-pointer items-center gap-3 rounded-xl border-t border-line/60 px-4 pt-2 font-medium text-white hover:bg-surface ${focusRing}`}
+          >
+            <Image src={CREATOR.avatar} alt="" width={32} height={32} className="h-8 w-8 rounded-full object-cover object-[50%_25%]" />
+            Pembuat: {CREATOR.name}
+          </Link>
         </div>
       )}
     </header>
