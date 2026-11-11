@@ -1,8 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Menu, X } from 'lucide-react';
+
+const CREATOR = 'Moch Fahmi Pahrezi';
 
 const focusRing = 'focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-glow';
 const thinLink = `cursor-pointer rounded py-3 text-sm font-medium text-white/90 underline decoration-transparent decoration-2 underline-offset-[10px] transition-colors duration-200 hover:text-white hover:decoration-flame ${focusRing}`;
@@ -55,6 +58,19 @@ export default function SiteHeader() {
           >
             Masuk Lab
           </Link>
+          <div className="flex items-center gap-3" title={`Dibuat oleh ${CREATOR}`}>
+            <Image
+              src="/pembuat.jpg"
+              alt={`Foto ${CREATOR}, pembuat SYVA`}
+              width={44}
+              height={44}
+              className="h-11 w-11 shrink-0 rounded-full border-2 border-white/30 object-cover object-[50%_25%] shadow-[0_8px_20px_-10px_rgba(10,8,60,0.9)]"
+            />
+            <p className="hidden leading-tight xl:block">
+              <span className="block font-mono text-[10px] uppercase tracking-widest text-lilac">Dibuat oleh</span>
+              <span className="block text-sm font-semibold text-white">{CREATOR}</span>
+            </p>
+          </div>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -92,6 +108,9 @@ export default function SiteHeader() {
               </Link>
             </li>
           </ul>
+          <p className="mt-1 border-t border-line/60 px-4 py-3 text-sm text-mist">
+            Dibuat oleh <span className="font-semibold text-white">{CREATOR}</span>
+          </p>
         </div>
       )}
     </header>
